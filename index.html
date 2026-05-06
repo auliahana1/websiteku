@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Website Ki</title>
+  <title>Website Aulia</title>
 
   <style>
     body {
@@ -61,16 +61,38 @@
       color: #555;
     }
 
-    .card1 {
-      background-color: white;
+    .card1 { background-color: white; }
+    .card2 { background-color: #e5e5e5; }
+    .card3 { background: linear-gradient(to bottom, #f8b6c2, white); }
+
+    /* SLIDER FOTO */
+    .slider {
+      overflow: hidden;
+      margin: 40px auto;
+      width: 90%;
     }
 
-    .card2 {
-      background-color: #e5e5e5;
+    .slide-track {
+      display: flex;
+      animation: scroll 15s linear infinite;
     }
 
-    .card3 {
-      background: linear-gradient(to bottom, #f8b6c2, white);
+    .slide {
+      flex: 0 0 auto;
+      margin: 0 10px;
+    }
+
+    .slide img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
   </style>
@@ -82,7 +104,7 @@
 
     <!-- KOTAK 1 -->
     <div class="card card1">
-      <img src="fotoku11.jpg" class="profile">
+      <img src="fotoku13.jpg" class="profile">
 
       <h2>Aulia Hana Rahma Dewi</h2>
 
@@ -98,7 +120,7 @@
 
       <p class="lucu">"aku ga banyak mau, cuma pengen makan enak tiap hari 😌"</p>
 
-      <iframe src="https://www.youtube.com/embed/JLd09jmEAYA" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/JLd09jmEAYA"></iframe>
     </div>
 
     <!-- KOTAK 2 -->
@@ -119,12 +141,12 @@
 
       <p class="lucu">"niatnya cuma rebahan 5 menit, tau-tau udah 2 jam 😭"</p>
 
-      <iframe src="https://www.youtube.com/embed/KdsGxzO3Jy8" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/KdsGxzO3Jy8"></iframe>
     </div>
 
     <!-- KOTAK 3 -->
     <div class="card card3">
-      <img src="fotoku13.jpg" class="profile">
+      <img src="fotoku11.jpg" class="profile">
 
       <h2>Aulia Hana Rahma Dewi</h2>
 
@@ -140,9 +162,27 @@
 
       <p class="lucu">"belajar penting… tapi makan juga penting 😌✨"</p>
 
-      <iframe src="https://www.youtube.com/embed/c6DaMaVsqIE" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/c6DaMaVsqIE"></iframe>
     </div>
 
+  </div>
+
+  <!-- FOTO GERAK -->
+  <div class="slider">
+    <div class="slide-track">
+
+      <div class="slide"><img src="fotoku13.jpg"></div>
+      <div class="slide"><img src="fotoku12.jpg"></div>
+      <div class="slide"><img src="fotoku11.jpg"></div>
+      <div class="slide"><img src="fotoku2.jpg"></div>
+
+      <!-- duplikat biar halus -->
+      <div class="slide"><img src="foto1.jpg"></div>
+      <div class="slide"><img src="foto2.jpg"></div>
+      <div class="slide"><img src="foto3.jpg"></div>
+      <div class="slide"><img src="foto4.jpg"></div>
+
+    </div>
   </div>
 
 </body>
